@@ -1,0 +1,25 @@
+package practice_al.prac;
+public class Al10 {
+	// 홀짝에 따라 다른 값 반환하기
+	// 재귀와 메서드로 풀어보기
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		solution(10);
+	}
+	
+	public static void solution(int n) {
+        int num = n;
+        if(n % 2 == 0){
+        	num += (num*num);
+            solution(num);
+        }else if(n%2==1){
+        	num += num;
+            solution(n-2);
+        }
+        if(n <= 1){
+        	System.out.println(num);
+            return;
+        }      
+    }
+}
